@@ -3,10 +3,6 @@
     font-family: 'Vazir', sans-serif;
 }
 
-.Chat .Spinner {
-    height: 50px;
-}
-
 .Chat input {
     border-radius: 5px;
     margin: 5px;
@@ -41,14 +37,29 @@
     margin: 10px;
 }
 
+.Chat .spinnerContainer {
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-content: center
+}
+
 .fadeIn{
+     background-color: #ffcccc;
+     font-weight: bold;
+   width: 100px;
+    border: 1px solid #cc0000;
+    border-radius: 5px;
      opacity:1;
-     height:25px;
      transition: opacity 0.5s 0.05s;
 
 }
 .fadeOut{
+         background-color: #ffcccc;
+     font-weight: bold;
+    width: 100px;
+    border: 1px solid #cc0000;
+    border-radius: 5px;    
      opacity:0;
-     height:25px;
      transition: opacity 0.5s;
 }

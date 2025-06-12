@@ -42,12 +42,14 @@ export default function Chat(): JSX.Element {
 
     return (
         <div className="Chat">
+            <div className="spinnerContainer">
+            <div className={spinner? "fadeIn" : "fadeOut"}>Thinking...</div>
+            </div>
             <form onSubmit={onFormSubmit}>
                 <input autoFocus type="text" name="q" value={q} onChange={e => setQ(e.target.value)}/>
-                <button type="submit" name="ask" onClick={ask}>Ask away</button>
+                <button type="submit" name="ask" onClick={ask}>Ask away -- just hit Enter</button>
                 <span id="error" className={lastError.length > 0 ? "fadeIn" : "fadeOut"}>{lastError}</span>
             </form>
-            <div className={spinner? "fadeIn" : "fadeOut"}>Thinking...</div>
             <div className="responsesContainer">
                 <div className="responses">{responses.map(r => (<span><pre>{r}</pre><hr /></span>))}</div>
             </div>

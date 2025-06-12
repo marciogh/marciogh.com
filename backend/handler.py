@@ -1,16 +1,29 @@
 import boto3
 import json
-from openai import OpenAI
+import os
 from datetime import datetime
 from collections import defaultdict
+from langchain_openai import ChatOpenAI
+from langchain_community.vectorstores import FAISS
+from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_community.document_loaders.s3_file import S3FileLoader
+from langchain.chains import RetrievalQA
 
 sm = boto3.client('secretsmanager', region_name='ap-southeast-2')
 r = sm.get_secret_value(SecretId='OPENAI_API_KEY')
-client = OpenAI(
-   api_key=json.loads(
-      (r['SecretString'])
-   )['OPENAI_API_KEY']
+os.environ["OPENAI_API_KEY"] = json.loads((r['SecretString']))['OPENAI_API_KEY']
+loader = S3FileLoader(bucket="lambda-marciogh", key="data/data.txt")
+documents = loader.load()
+embeddings = OpenAIEmbeddings()
+vectorstore = FAISS.from_documents(documents, embeddings)
+retriever = vectorstore.as_retriever()
+llm = ChatOpenAI(model="gpt-4.1")
+qa_chain = RetrievalQA.from_chain_type(
+   llm=llm,
+   retriever=retriever,
+   return_source_documents=True
 )
+
 ratelimiter = defaultdict(int)
 
 def lambda_handler(event, context):
@@ -40,13 +53,11 @@ def lambda_handler(event, context):
    print(f"Headers: {headers}, Params: {query_params}")
    print(f"Body: {body}")
 
-   response = client.responses.create(
-      model="gpt-4.1",
-      input=query_params['q']
-   )
+   response = qa_chain.invoke({"query": query_params['q']})
+
    return {
       'statusCode': 200,
-      'body': json.dumps(response.output_text),
+      'body': json.dumps(response['result']),
       'headers': {
             'Access-Control-Allow-Headers': 'Content-Type',
             'Access-Control-Allow-Origin': '*',

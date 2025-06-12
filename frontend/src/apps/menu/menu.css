@@ -1,0 +1,15 @@
+.Menu {
+    height: 60px;
+}
+
+.Menu img {
+    padding: 1px;
+    margin-top: 15px;
+}
+
+.Menu img:hover {
+    margin-top: 0px;
+    padding: 0px;
+    width: 60px;
+    height: 60px;
+}

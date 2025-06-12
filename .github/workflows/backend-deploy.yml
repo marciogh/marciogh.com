@@ -1,0 +1,39 @@
+name: Backend Deploy
+env:
+  TF_LOG: INFO
+  TF_INPUT: false
+run-name: Deploying backend changes from ${{ github.actor }}
+on: [push]
+jobs:
+  Backend-Deploy:
+    permissions:
+      id-token: write
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13' 
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.12.1
+      - name: Check out repository code
+        uses: actions/checkout@v4          
+      - name: OIDC
+        uses: aws-actions/configure-aws-credentials@v4.1.0
+        with:
+          audience: sts.amazonaws.com
+          aws-region: ap-southeast-2
+          role-to-assume: arn:aws:iam::639886339024:role/github-actions-marciogh.com      
+      - name: Terraform Init
+        working-directory: ./terraform
+        id: init
+        run: terraform init
+      - name: Terraform Apply
+        working-directory: ./terraform
+        id: apply
+        run: terraform apply -auto-approve

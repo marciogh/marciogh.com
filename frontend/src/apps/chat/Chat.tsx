@@ -1,6 +1,10 @@
 import { JSX, useState } from "react";
 import "./chat.css";
+import showdown from "showdown";
+import DOMPurify from 'dompurify'
 
+const converter = new showdown.Converter();
+    
 const BACKEND = "https://fqc0a78xlj.execute-api.ap-southeast-2.amazonaws.com/test"
 
 export default function Chat(): JSX.Element {
@@ -29,9 +33,10 @@ export default function Chat(): JSX.Element {
                         setLastError("To many questions, come back later");
                     } else {
                         response.json().then((data) => {
+                            const html = converter.makeHtml(data);
                             setSpinner(false);
                             setQuestions([q, ...questions])
-                            setResponses([data, ...responses]);
+                            setResponses([html, ...responses]);
                         })
                     }
                 })
@@ -54,7 +59,7 @@ export default function Chat(): JSX.Element {
                 <span id="error" className={lastError.length > 0 ? "fadeIn" : "fadeOut"}>{lastError}</span>
             </form>
             <div className="responsesContainer">
-                <div className="responses">{responses.map(r => (<div><span>{r}</span></div>))}</div>
+                <div className="responses">{responses.map(r => (<div><span dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(r)}}/></div>))}</div>
             </div>
         </div>
     )

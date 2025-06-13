@@ -6,19 +6,6 @@ resource "aws_s3_bucket" "lambda_bucket" {
   bucket = var.lambda_bucket
 }
 
-data "archive_file" "backend" {
-  type        = "zip"
-  source_dir  = "../backend"
-  output_path = "./tmp/backend.zip"
-}
-
-resource "aws_s3_object" "backend" {
-  bucket = aws_s3_bucket.lambda_bucket.id
-  key    = "backend.zip"
-  source = data.archive_file.backend.output_path
-  etag   = data.archive_file.backend.output_md5
-}
-
 resource "aws_iam_role" "lambda_role" {
   name               = "handler-lambda-role"
   assume_role_policy = <<EOF
@@ -60,19 +47,12 @@ resource "aws_iam_role_policy_attachment" "basic_executionrole" {
 }
 
 resource "aws_lambda_function" "lambda_handler" {
-  function_name    = "marcio-gh-backend-openai"
-  role             = aws_iam_role.lambda_role.arn
-  handler          = "handler.lambda_handler"
-  source_code_hash = data.archive_file.backend.output_base64sha256
-  runtime          = "python3.9"
-  layers           = ["arn:aws:lambda:ap-southeast-2:639886339024:layer:openai-layer:6"]
-  timeout          = 20
-  s3_bucket        = aws_s3_bucket.lambda_bucket.id
-  s3_key           = aws_s3_object.backend.key
-
-  depends_on = [
-    aws_s3_object.backend
-  ]
+  function_name = "marcio-gh-openai"
+  role          = aws_iam_role.lambda_role.arn
+  package_type  = "Image"
+  memory_size   = 1024
+  image_uri     = "639886339024.dkr.ecr.ap-southeast-2.amazonaws.com/marciogh:latest"
+  timeout       = 20
 }
 
 resource "aws_cloudwatch_log_group" "lambda_cloudwatch_log" {
@@ -106,11 +86,9 @@ resource "aws_iam_role_policy_attachment" "api_gateway_cloudwatch_role" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
 }
 
-
-
 resource "aws_api_gateway_rest_api" "openai" {
-  name        = "OpenAI"
-  description = "OpenAI"
+  name        = "marciogh-openai"
+  description = "marciogh-openai"
 }
 
 resource "aws_api_gateway_resource" "proxy" {
@@ -168,7 +146,7 @@ resource "aws_api_gateway_stage" "openai_stage" {
 resource "aws_lambda_permission" "apigw" {
   statement_id  = "AllowAPIGatewayInvoke"
   action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.lambda_handler.function_name
+  function_name = aws_lambda_function.lambda_handler.arn
   principal     = "apigateway.amazonaws.com"
   source_arn    = "${aws_api_gateway_rest_api.openai.execution_arn}/*/*"
 }
@@ -176,7 +154,7 @@ resource "aws_lambda_permission" "apigw" {
 resource "aws_lambda_permission" "cloudwatch" {
   statement_id  = "AllowLogs"
   action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.lambda_handler.function_name
+  function_name = aws_lambda_function.lambda_handler.arn
   principal     = "apigateway.amazonaws.com"
   source_arn    = "${aws_api_gateway_rest_api.openai.execution_arn}/*/*"
 }

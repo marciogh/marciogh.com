@@ -10,6 +10,10 @@ experimenting with several different technologies.
   adding context from resumes, blogposts and other public contents related to
   myself
 
+# Docker and ECR
+
+- Container for Python code
+
 # AWS Serverless
 
 - Python AWS lambda functions behind API Gateway proxy.

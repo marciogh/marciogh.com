@@ -1,4 +1,4 @@
-openai==1.86.0
 faiss-cpu==1.11.0
 langchain-openai==0.3.22
+langchain-community==0.3.25
 unstructured==0.17.2

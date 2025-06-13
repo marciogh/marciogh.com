@@ -3,6 +3,12 @@
     font-family: 'Vazir', sans-serif;
 }
 
+.Chat button:hover {
+    cursor:pointer;
+    background-color: #cc0000;
+    color: white;
+}
+
 .Chat input {
     border-radius: 5px;
     margin: 5px;
@@ -35,6 +41,13 @@
 
 .Chat .responses {
     margin: 10px;
+    overflow-x: auto;
+}
+
+.Chat .responses div {
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
 .Chat .spinnerContainer {

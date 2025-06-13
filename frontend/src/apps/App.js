@@ -6,7 +6,7 @@ export default function App() {
     return (
         <div className="App">
         <header><a href='https://github.com/marciogh/marciogh.com/'>Github source</a></header>
-        <main contentEditable>
+        <main>
             <Profile />
             <Menu />
             <Chat />

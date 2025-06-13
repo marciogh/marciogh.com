@@ -1,9 +1,16 @@
 import { JSX, useState } from "react";
 import "./chat.css";
 
-const BACKEND = "https://bqo5eq2olj.execute-api.ap-southeast-2.amazonaws.com/test"
+const BACKEND = "https://fqc0a78xlj.execute-api.ap-southeast-2.amazonaws.com/test"
 
 export default function Chat(): JSX.Element {
+
+    const [spinner, setSpinner] = useState(false);
+    const [responses, setResponses] = useState<string[]>([]);
+    const [questions, setQuestions] = useState<string[]>([]);
+    const [lastError, setLastError] = useState<string>("");
+    const [q, setQ] = useState<string>("");
+
 
     function onFormSubmit(e) {
         e.preventDefault();
@@ -23,6 +30,7 @@ export default function Chat(): JSX.Element {
                     } else {
                         response.json().then((data) => {
                             setSpinner(false);
+                            setQuestions([q, ...questions])
                             setResponses([data, ...responses]);
                         })
                     }
@@ -35,11 +43,6 @@ export default function Chat(): JSX.Element {
         }
     }
 
-    const [spinner, setSpinner] = useState(false);
-    const [responses, setResponses] = useState<string[]>([]);
-    const [lastError, setLastError] = useState<string>("");
-    const [q, setQ] = useState<string>("");
-
     return (
         <div className="Chat">
             <div className="spinnerContainer">
@@ -51,7 +54,7 @@ export default function Chat(): JSX.Element {
                 <span id="error" className={lastError.length > 0 ? "fadeIn" : "fadeOut"}>{lastError}</span>
             </form>
             <div className="responsesContainer">
-                <div className="responses">{responses.map(r => (<span><pre>{r}</pre><hr /></span>))}</div>
+                <div className="responses">{responses.map(r => (<div><span>{r}</span></div>))}</div>
             </div>
         </div>
     )

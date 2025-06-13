@@ -1,0 +1,947 @@
+Marcio Ghiraldelli
+https://www.linkedin.com/in/marciogh/
+https://marciogh.com/
+Australian Citizen / Sydney NSW
+Summary
+●
+●
+●
+●
+●
+Atlassian Alumni, software engineer, cloud architect, proficient in agile environments
+Wide experience across misc IT environments, from backend / network sysadmin to full
+stack websites, from startups to large enterprise companies
+Design and implementation of high availability / load, customer facing applications in:
+○
+Java, Kotlin, Go, Python
+○
+AWS
+Expertise leading and coaching teams for best processes balancing throughput and risks
+in different scenarios
+As a Software engineer for more than 25 years, I'm able to lead by example, and
+coordinate/facilitate complex technical decisions
+Education
+●
+●
+●
+●
+AWS Certified Solutions Architect - Associate Certification (Australia/NSW)
+Project Management Professional PMP - PMI, MBA (Brazil/SP)
+SUN SCEA III Java Architect Certificate (Brazil/SP)
+Bachelor of Science (B.S.), Computer Sciences (Brazil/SP)
+Experience
+Software Engineer - Indebted -
+Jan 2025 - May 2025 (Redundancy)
+●
+Australia/NSW - Full Time Employee
+●
+Tech stack GoLang, AWS Serverless, SQS/SNS, DynamoDB, Postgres/RDS, Terraform
+●
+Reduced 15% CPU usage of AWS RDS postgres usage by refactoring postgres
+projection postgres database connection system
+●
+Improved observability with new Cloudwatch dashboards to monitor database replication
+●
+Paved the way for new event sourcing infrastructure by the architecture and
+implementation of new collection communication events coming from new models built
+by Data Science team
+Software Engineering Manager - Atlassian -
+Oct 2022 - June 2024 (Sabbatical)
+●
+Australia/NSW - Full Time Employee
+●
+Designed team, crafted job descriptions, hired and formed a 7 engineers Data Platform
+access controls team for regulated industries
+●
+Managed stakeholders across multiple Engineering teams, Security, Risk & Compliance
+and CFO Risk Auditors
+●
+Crafted average 2 years roadmap across 3 work streams, defining required internal data
+access controls for regulated industries over infrastructure spread on around 300 AWS
+accounts and 5k internal users, most notably FedRAMP
+○
+Java/Kotlin
+○
+AWS IAM, DynamoDB, RDS postgres
+●
+Established OKRs and KPIs, leading and lagging metrics to trace tools adoption and
+developer productivity
+○
+Splunk, SignalFX
+Software Engineer - Atlassian -
+Oct 2018 - Oct 2022
+●
+Australia/NSW - Full Time Employee
+●
+Tech stack :
+○
+Java/Kotlin, Python, Ansible
+○
+AWS RDS Postgres, DynamoDB, ElasticSearch, Organizations, EventBridge,
+Backup
+●
+Increased 5k Atlassian engineers development time by implementing and rolling out
+tools to provision and operate their own databases in Cloud PaaS
+●
+Supported migration from Typescript to Kubernetes Golang by implementing integrations
+with Open Service Broker API for SQS, RDS, JWT tokens
+Quality Engineer - Atlassian -
+Apr 2015 - Oct 2018
+●
+Australia/NSW - Full Time Employee
+●
+Former Quality Engineer for JIRA - Enterprise, Performance and Cloud/OnDemand
+●
+Currently Senior Quality Engineer for PaaS - Internal AWS Platform for Developers
+●
+Contract Tests (PACT) for micro services, allowing decrease volume of existing
+integration tests in PaaS solution
+●
+Eliminated QA testing bottleneck, by implementing Quality Champion programs,
+providing both technical testing infrastructure/integration solutions as well as broad
+understanding of product’s (JIRA) current and upcoming new features
+●
+Development and deployment of Scala large horizontal scalable load testing
+infrastructure to validate AWS infrastructure
+Software Engineer - UOL -
+Dec 2008 - May 2015
+-
+Brazil/SP
+●
+Tech stack: Java Spring, RabbitMQ, Splunk
+●
+Allowed decommission of 5 1U compute stack by implementing apache commons pool
+to concurrently execute Sitef payment gateway in a single machine
+●
+Supported +10 R&D professionals being technical leader/coach of in internet price
+comparison tool in both Scrum and Kanban frameworks
+●
+10.000+ messages/seconds RabbitMQ asynchronous architecture for offers impression
+and click processing
+●
+Price comparison Apache Solr search implementation and operation
+●
+Big data collect (Splunk) and process for business insights
+●
+Automated build and tests structure with jenkins for +20 maven projects
+Software Engineer - Accurate Software -
+Apr 2008 - Dec 2008 - Brazil/SP
+●
+Java Developer of B2W - Americanas.com Submarino.com Shoptime.com
+●
+Weblogic - E- commerce development and maintenance
+Software/System Engineer - Kaerea Agencia de Internet
+- Jan 2006 - Dec 2008
+- Brazil/SP -
+Owner)
+●
+●
+●
+Development of customized websites with dynamic content (PHP in house CMS)
+Ecommerce solutions, featuring online payment and delivery tracking
+Business partnerships with Mkt Agencies
+Software/System Engineer - NeoBiz
+- Jan 2000 - Dec 2006 - Brazil/SP
+●
+Linux server admin with PHP/PostgreSQL for web developers and Apache/Qmail admin
+for hosting operation
+●
+Network admin of E1 telco/radius servers for dial up access
+●
+Wifi network and firewalling
+●
+Development of PHP websites / Initial training and implementation of Java J2EE
+
+
+
+UOL 2008 to 2015
+Tech leader of 10 software engineers in an ecommerce system
+- Solr (predecessor of ElasticSearch)
+- High volume of traffic for print/click ROI measurement
+
+{ FOCUS FOR TYRO }
+- Company shifting to EFTPOS
+- Pool/parallel credit card gateway / Airlines booking (amadeus screenscraper)
+
+Atlassian 2015 to 2018
+QA of enterprise server software
+- Distributed cache (Java/Redis/Memcache)
+- Paralallel load testing in AWS (skala)
+- Internal mobility to AWS PaaS
+
+Atlassian 2018 to 2022
+- (Golang) Kubernetes provisioning of JWT tokens for EC2 computes
+- (kotlin + AWS) Provisioning lifecycle of RDS/DynamoDB/ElasticSearch
+- (kotlin + AWS) SQL query review and execution tool (PII/obfuscation)
+
+Atlassian 2022 to 2024
+Manager
+- Created new Access Control team (7 engineeers)
+- Altassian front line managers layoff (600 affected)
+
+Sabbatical
+
+Decided to come back as IC, given not enough experience acquired as manager.
+
+Driva 2025
+{ FOCUS FOR BEFOREPAY }
+- Challenge: Typescript full stack lending system
+- Approved in interview for fullstack engineering
+
+
+Indebted 2025
+
+- Golang Serverless - Event Sourcing
+- Events projection connection consolidation
+- new event design and implementation for new AI workflow
+- Layoff after 5 months
+
+- (Golang) Events projection connection consolidation
+
+  - Event sourcing projection
+  - CustomerFollowUp lambda using 5 different projections
+  - https://pkg.go.dev/github.com/jackc/pgx/v4/pgxpool
+  - One connection pool per projection, all to same database, for schema segregation
+  - Refactored projection and repository code to reuse same connection pool
+  - Maintained schema segregation via database transactions
+    - from jdbc:postgresql://localhost:5432/mydatabase?currentSchema=myschema
+  	- to tx.Begin(); tx.Query(ctx, "SET search_path TO myschema"); ... ;
+  - Optional Cloudwatch client to automatic generate projection catchup metrics
+    - https://golang.cafe/blog/golang-functional-options-pattern.html
+
+type CustomerProjection {
+	pool *pgxpool.Pool
+	cloudWatchClient *Client;
+}
+
+func (c *CustomerProjection) New(pool *pgxpool.Pool, options ...func(*CustomerProjection)) *CustomerProjection {
+	customerProjection = &CustomerProjection{
+		pool: pool
+	}
+	for _, o: range options {
+		o(customerProjection)
+	}
+}
+
+func WithCloudWatch(cloudWatchClient *Client) func(*CustomerProjection) {
+	return func(c *CustomerProjection) {
+		c.cloudWatchClient = cloudWatchClient
+	}
+}
+
+  - terraform dashboard to monitor projection position
+
+
+
+
+- (Golang) Kubernetes admission webhook for DNS Aliases
+  - AWS Micros service platform
+  - Declarative model
+  - Configuration of DNS aliases
+  - Micros2 - on top of kubernetes
+  - migration of DNS aliases from old to new platform
+  - use of Golang channels for parallelising multiple requests
+  - https://github.com/atlassian/voyager/commit/1500168837f329a9367a5e72448cad04e7e93b26
+
+
+
+
+- (Java) Pool/parallel credit card gateway
+  
+  Challenge
+  - JBoss monolith processing credit card using limited instances of Sitef
+  	- high latency for credit card processing
+  	- Required 3 weeks for monilith deployment to add new credit cards
+
+  Solution
+  - New webserver API to process credit card transactions
+  - Multithread'ed Sitef using Apache Commons Pool and Runtime.exec process invocation
+  - Feature flag to route credit card brands to new webserver
+  - Splunk logs dashboards displaying success rate per credit card brand
+  - Time to deploy new credit card integrations dropped from 3 to 1 week
+
+  With a wide experience across multiple languages such as Java, Python and Golang, allied with deep AWS Cloud infrastructure integrations, I'm able to bring market best practices to your company, modernizing and simplifying the engineering and development cycle of software developers teams.
+
+With a wide experience across multiple languages such as Java, Python and Golang, allied with deep AWS Cloud infrastructure integrations, I'm able to bring market best practices to your company, makes me an ideal candidate to cover all quality aspects across several different projects.
+
+After a long career working remotely in large IT companies, I'm looking for local in office opportunities, as a resident of .
+
+
+Marcio Ghiraldelli
+https://www.linkedin.com/in/marciogh/
+https://marciogh.com/
+Australian Citizen
+
+Publications
+
+
+Elegant use of GoLang channels with AWS SQS
+Medium Technical Publication
+November 2018
+https://marcioghiraldelli.medium.com/elegant-use-of-golang-channels-with-aws-sqs-dad20cd59f34
+
+Schedule check for forgotten running EC2 with AWS Lambdas
+Medium Technical Publication
+September 2018
+https://medium.com/@marcioghiraldelli/monitor-aws-running-ec2-with-lambdas-34255ac41f91
+
+Presentation: Scrum Control or Kanban Agility (English)
+Atlassian Europe Summit 2017
+March 2017
+https://www.atlassian.com/company/events/summit-europe/watch-sessions/2017/plan-track/scrum-control-or-kanban-agility-you-can-have-both-using-metrics
+Presentation: Monitoring Payment Gateway WIth Splunk (Brazilian Portuguese)
+September 2014
+https://marciogh.wordpress.com/2014/09/24/splunk-live-sao-paulo-17-de-setembro-de-2014/
+Presentation: Splunk Conf 2013 (English)
+Splunk Conf Las Vegas
+September 2013
+https://marciogh.wordpress.com/2014/01/02/splunk-conf-2013/
+
+Projects
+
+AWS RDS Immutable Backups
+Mar  2019 – Dec  2019
+Problem:
+The company had a fleet of more than 1000 RDS instances with hundreds of postgres databases each, distributed across more than 100 AWS accounts, with a semi standard access control.
+This scenario posed a risk for data backup protection, particularly against ransomware.
+Solution:
+I was responsible to research, architect, and lead the implementation of the solution.
+Company AWS Accounts were organized in AWS Organizations, segregating production from test data, and AWS Service Policies enforced AWS RDS resource tags.
+Using AWS EventBridge, AWS Backup and a combination of AWS resource tagging enforcement all backup retention across all RDSes in the company where standardized in a centralized Ansible config as code repository, owned by Cloud Security teams.
+
+AWS RDS Mock Tests
+November 2017 – November 2017
+Problem:
+The RDS Postgres database provider on our PaaS infrastructure uses an RDS mock built with moto (AWS mock) and real Postgres server. However, instead of creating different servers for every test (as a real AWS RDS would behave) it was reusing the same server, causing some concurrency problems.
+Solution:
+Change the existing solution to create new servers for every RDS create instance call, allowing more integration tests being moved from AWS RDS to mock RDS, accelerating the overall test execution.
+- Python
+- Docker
+- PostgreSQL
+
+
+
+Splunk Bootcamp Training
+Problem:
+Atlassian adopted Splunk as a default log analysis for our services platform, however we haven’t a standard training for the Engineering team on how to use it.
+Solution:
+As a former Splunk evangelist in my previous company, and in partnership with the Atlassian Splunk Team, we created and operated the Splunk Bootcamp training company wide, introducing the Splunk architecture and practical hands on exercises for more than 100 employees.
+
+
+PaaS Micros Service CLI Unit Tests
+October 2017 – October 2017
+Problem:
+A small, however critical piece of the PaaS infrastructure: the CLI tool which all developers in the company uses to spin up and interact with micros services had a high rate of roll forwards to fix bugged releases. After analysis it was identified that one major cause was it was being released without tests
+Solution:
+After usage analysis, I identified most used commands, created initial unit testing framework, including coverage statistics, and wrote tests for these code paths. I delivered the solution to the development team, which started to write unit tests as part of their default development cycle.
+- NodeJS
+- Datadog (for test metrics)
+- WebSockets
+
+HTTP Log Broker
+September 2017 – September 2017
+Problem:
+Pushing data/logs to Splunk / Datadog from build pipelines (or other non conventional sources) was cumbersome, given the authorization complexity and different protocols (REST for Splunk, UDP for Datadog)
+Solution:
+Created a HTTP Log Broker micro service, allowing centralized way to push data to Splunk/Datadog with simple curl commands, simplifying the way developers and QE build dashboards for the most various needs.
+- Java SpringBoot
+- Docker
+
+
+JIRA AWS Soaking Tests
+May 2017 – May 2017
+Problem:
+JIRA Cloud Performance development team rollout process taking average 1 week to hit production, slow feedback from changes.
+Solution:
+Using clone of large customers on segregate AWS environment, created a semi intelligent JIRA crawler horizontally (EC2 docker containers) and vertically (threads) scalable, generating controlled/heavy load.
+This solution decreased the rollout/testing from 1 week to hours for changes like performance tuning (JDBC connection pooling, Free Text Search over SQL, SQL 1*N bad pattern fixing, Cloudfront static files TTL configuration, etc), increase the development team speed in tenth’s orders of magnitude.
+- Java TestNG
+- Selenium/XVFB
+- Docker
+- Bamboo/EC2 Agents
+
+
+
+“SHARK” memory analysis
+April 2017 – April 2017
+Problem:
+During migration from large Java monolith application from stateful (Server offering) to stateless (AWS), risk of potential data leakage between different customers using the same application has been identified.
+Solution:
+One initiative created by me was the “SHARK” analysis.
+The idea was to spin up the stateless Java application, and exercise it in several different ways such as importing data, running integration tests, and exploring it manually, injecting “SHARK” Strings everywhere possible in customer data. After application quiesce, extract a JVM Memory Heap Dump and scan it using OQL, looking for “SHARK” Strings lingering in the memory.
+As a stateless application, any customer data remaining in memory was a potential cross-customer data leakage problem. With this strategy, one unidentified OSGI plugin problem was identified, which would have caused a catastrophic incident in production if shipped to customers. And a backlog of several small other potential problems was created.
+- Java jmap
+- Hacking existing Java WebDriver integration tests
+- Splunk (for analysis of OQL exports)
+
+
+Java Test Annotation Scanner
+October 2016 – October 2016
+Problem:
+JIRA developers with no visibility of existent integration test coverage
+Solution:
+Static analysis of large Java monolith code, scanning annotations and generating test coverage service UI, allowing developers to browse existing tests by category and keywords
+- Java Spring Boot
+- Jboss Jandex
+
+
+
+Migration of Microsoft FAST search to Apache Solr. 2.5 million documents
+October 2012 – July 2013
+ShoppingUOL - Price comparison tool - Avg 1 PageView/second
+Full stack infrastructure splitted in two logical areas in the datacenter, each one with independent network racks and energy supply.
+Decision between clustered or replicated instances of Solr AND between using physical or VMs hosts.
+Capacity planning simulated on lab Linux physical machines, with JMeter generating multithreading indexing and access operations. CPU, memory, I/O operations and network bandwidth measured with kSar. Functional errors measured with JMeter HTTP status responses XML.
+Due the know network instability between areas in production environment, high level of disk usage of Zookeper (the Apache cluster orchestrator) identified on lab tests, lack of flexibility in operation environment, decided to use replicated instances.
+Due to the high IO usage both on the master indexer and read only slaves instances, decided physical machines with 15000 RPM disks.
+Tuned EJB indexer consumer pool balancing CPU usage and Database delay. Tuned number of document IDs on each JMS message to reduce database transaction round trip.
+Asynchronous indexing of contents with JBoss JMS queue. As the higher version of Jboss homologated in our company was 4.2.3, no option of clustering processing of the queue, just master/spare, and queues persisted on highly concurrent Oracle database. Moved to RabbitMQ for Erlang high liability on clustered queues, persistence on disk to avoid using the Oracle database, and easier integration with Spring thread pool consumers compatible with EJB pool.
+The result of decoupling of master indexing and slaves read only turned to zero the product outages by index failure on the last year, even in front of functional mistakes, due the flexibility provided for the operations teams.
+Huge Datacenter operation economy with devolution of the 38 FAST physical machines with 2U racks each, in favor of new 6 machines with 1U.
+
+
+
+Architecture and development of a new Java backend for service online credit card payments, as well of bank EDI processing for offline transactions
+January 2012 – July 2012
+PagSeguro - Internet payment gateway (Brazilian version of PayPal)
+Decisions made:
+Using non clustered Spring in lightweight Jetty servers with manual transaction control due the lack of Java Enterprise server homologation and better decoupling of legacy present Jboss 4.2.3 on the frontend processing.
+Used of versioned REST HTTP between JMS to favour decoupling of mocked integrated tests and deliverys.
+Chain of Responsibility design pattern for better code maintainability and documentation.
+Use of an pre-existent Splunk Big Data operation to N1 monitor tool of real time transactions.
+Turned legacy SITEF client (brazilian legacy credit card processor) to multi thread using Apache Commons Pool.
+Switch in production environment using feature toggle by credit card brand
+Results:
+The Chain Of Responsibility made easy the documentation and information exchange between R&D and N1 monitoring team.
+With Splunk Big Data analysis identified a series of SLA faults and high levels of frauds with some credit card brands.
+Easier to business decision in migrating legacy SITEF to new credit card partner with WebServices integration (faster processing)
+Time to deploy new credit card integrations in production felt from 3 to one week, due the lightweight coding, testing and deploy need comparing to the old platform.
+
+
+Publicidades Home UOL
+June 2010 – June 2010
+Advertisement system on +5000/sec page views internet portal http://www.uol.com.br
+Async record and processing of clicks/prints
+
+
+
+Migration of client-side behavior cookie to server side session storage
+January 2010 – January 2010
+UOL Audience
+Avg cookie size 1,8 kbytes, spreaded to 7 million users.
+Estimated 11 Terabyte of uplink consumed monthly.
+Some company webservers returning errors due the 8k Apache HTTP header size limit
+Approximate 2.5 million measures per day / peak 60 per secs / 50ms per request
+Usage of in house erlang framework for distributed MySQL storage
+Java architecture to provide horizontal scalability as well as service facade to internal integrations
+First test - measure erlang/MySQL performance/liability
+6 physical lab machines
+1-Jmeter, 4-Erlang Proxy, 5,6,7-Erlang/MySQL storage
+1 billion of random key/value pairs with 300 chars each
+Success:
+Reached 250 read writes requests per second with 100% of HTTP 200, no data loss
+Identified cluster performance stability after 40% of test in a cross qps/volume graphic
+Decided to use HTTP Ngnix balance instead of erlang cluster minimize network dependency and distributed CPU json marshalling/unmarshalling CPU load to storage clusters
+Second test - validate full stack software with provided hardware
+4 Dell R200 and 4 Dell R410 - mounted the machines on a bench before they get installed in datacenter
+4 * R410 = Borg Nodes + MySQL (b1, b2, b3, b4)
+2 * R210 = roi-meter-clicklogger-client + roi-meter-ws + Borg Proxy (bproxy01, bproxy02)
+2 * R210 = JMeter
+JMeter data load simulating all user flows, with added random information on each request to maximize data disparity. Random 10ms interval between request, aiming 300 request per second running for more than 24 hours. Runned for 48 hours. Collected last 12 hours of results.
+Success:
+Under load 5 times higher than actual production load: Histogram shows that more than 40% of requests are inside 20ms-40ms, and above 80ms are rare
+Identified bottleneck on CPU in marshalling/unmarshalling json between frontend and backend. Decided to join the applications and change remote to local call. Doubled performance with less machines.
+
+
+
+
+
+
+
+name: Backend Deploy
+env:
+  TF_LOG: INFO
+  TF_INPUT: false
+run-name: Deploying backend changes from ${{ github.actor }}
+on: [push]
+jobs:
+  Backend-Deploy:
+    permissions:
+      id-token: write
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13' 
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.12.1
+      - name: Check out repository code
+        uses: actions/checkout@v4          
+      - name: OIDC
+        uses: aws-actions/configure-aws-credentials@v4.1.0
+        with:
+          audience: sts.amazonaws.com
+          aws-region: ap-southeast-2
+          role-to-assume: arn:aws:iam::639886339024:role/github-actions-marciogh.com      
+      - name: Terraform Init
+        working-directory: ./terraform
+        id: init
+        run: terraform init
+      - name: Terraform Apply
+        working-directory: ./terraform
+        id: apply
+        run: terraform apply -auto-approve
+
+name: Frontend Deploy
+run-name: Deployend frontend changes push from ${{ github.actor }}
+on: [push]
+jobs:
+  Frontend-Deploy:
+    permissions:
+      id-token: write
+    runs-on: ubuntu-latest
+    steps:  
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: npm install
+        working-directory: ./frontend
+        run: npm install
+      - name: npm run build
+        working-directory: ./frontend
+        run: npm run build
+      - name: OIDC
+        uses: aws-actions/configure-aws-credentials@v4.1.0
+        with:
+          audience: sts.amazonaws.com
+          aws-region: ap-southeast-2
+          role-to-assume: arn:aws:iam::639886339024:role/github-actions-marciogh.com
+      - name: S3 rm
+        run: aws s3 rm --recursive s3://marciogh.com/app/
+      - name: S3 upload
+        working-directory: ./frontend
+        run: aws s3 cp ./build s3://marciogh.com/app/ --recursive
+
+import boto3
+import json
+import os
+from datetime import datetime
+from collections import defaultdict
+from langchain_openai import ChatOpenAI
+from langchain_community.vectorstores import FAISS
+from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_community.document_loaders.s3_file import S3FileLoader
+from langchain.chains import RetrievalQA
+
+sm = boto3.client('secretsmanager', region_name='ap-southeast-2')
+r = sm.get_secret_value(SecretId='OPENAI_API_KEY')
+os.environ["OPENAI_API_KEY"] = json.loads((r['SecretString']))['OPENAI_API_KEY']
+loader = S3FileLoader(bucket="lambda-marciogh", key="data/data.txt")
+documents = loader.load()
+embeddings = OpenAIEmbeddings()
+vectorstore = FAISS.from_documents(documents, embeddings)
+retriever = vectorstore.as_retriever()
+llm = ChatOpenAI(model="gpt-4.1")
+qa_chain = RetrievalQA.from_chain_type(
+   llm=llm,
+   retriever=retriever,
+   return_source_documents=True
+)
+
+ratelimiter = defaultdict(int)
+
+def lambda_handler(event, context):
+
+   # time slot ratelimiter
+   now = datetime.now()
+   ratelimiter[int(now.timestamp()/60)] += 1;
+   if (ratelimiter[int(now.timestamp()/60)] >= 20):
+      return {
+         'statusCode': 429,
+         'body': '429 too many requests',
+         'headers': {
+               'Access-Control-Allow-Headers': 'Content-Type',
+               'Access-Control-Allow-Origin': '*',
+               'Access-Control-Allow-Methods': 'OPTIONS,POST,GET',         
+               'Content-Type': 'application/json'
+         }
+      }
+
+   method = event['httpMethod']
+   path = event['path']
+   headers = event['headers']
+   query_params = event['queryStringParameters']
+   body = event['body']
+
+   print(f"Method: {method}, Path: {path}")
+   print(f"Headers: {headers}, Params: {query_params}")
+   print(f"Body: {body}")
+
+   response = qa_chain.invoke({"query": query_params['q']})
+
+   return {
+      'statusCode': 200,
+      'body': json.dumps(response['result']),
+      'headers': {
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'OPTIONS,POST,GET',         
+            'Content-Type': 'application/json'
+      }
+   }
+
+if __name__ == "__main__":
+   print("main")
+
+   import { JSX, useState } from "react";
+import "./chat.css";
+
+const BACKEND = "https://bqo5eq2olj.execute-api.ap-southeast-2.amazonaws.com/test"
+
+export default function Chat(): JSX.Element {
+
+    function onFormSubmit(e) {
+        e.preventDefault();
+        ask()
+    }
+
+    function ask() {
+        if (q.length > 0) {
+            setSpinner(true);
+            setLastError("")
+            setQ("")
+            fetch(BACKEND + "?q=" + encodeURIComponent(q))
+                .then((response) => {
+                    if (response.status === 429) {
+                        setSpinner(false);
+                        setLastError("To many questions, come back later");
+                    } else {
+                        response.json().then((data) => {
+                            setSpinner(false);
+                            setResponses([data, ...responses]);
+                        })
+                    }
+                })
+                .catch((error) => {
+                    setSpinner(false);
+                    setLastError(error);
+                    console.log(lastError);
+                });
+        }
+    }
+
+    const [spinner, setSpinner] = useState(false);
+    const [responses, setResponses] = useState<string[]>([]);
+    const [lastError, setLastError] = useState<string>("");
+    const [q, setQ] = useState<string>("");
+
+    return (
+        <div className="Chat">
+            <div className="spinnerContainer">
+            <div className={spinner? "fadeIn" : "fadeOut"}>Thinking...</div>
+            </div>
+            <form onSubmit={onFormSubmit}>
+                <input autoFocus type="text" name="q" value={q} onChange={e => setQ(e.target.value)}/>
+                <button type="submit" name="ask" onClick={ask}>Ask away -- just hit Enter</button>
+                <span id="error" className={lastError.length > 0 ? "fadeIn" : "fadeOut"}>{lastError}</span>
+            </form>
+            <div className="responsesContainer">
+                <div className="responses">{responses.map(r => (<span><pre>{r}</pre><hr /></span>))}</div>
+            </div>
+        </div>
+    )
+}
+
+.Chat {
+    padding: 20px;
+    font-family: 'Vazir', sans-serif;
+}
+
+.Chat input {
+    border-radius: 5px;
+    margin: 5px;
+    width: 265px;
+}
+
+.Chat button {
+    border-radius: 5px;
+}
+
+.Chat span#error {
+    background-color: #ffcccc;
+    color: #cc0000;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    border: 1px solid #cc0000;
+    border-radius: 5px;
+}
+
+.Chat .responsesContainer {
+    border-radius: 5px;
+    height: 300px;
+    border: 1px solid #cccccc;
+    text-align: left;
+    background-color: #f9f9f9;
+    overflow: scroll;
+}
+
+.Chat .responses {
+    margin: 10px;
+}
+
+.Chat .spinnerContainer {
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-content: center
+}
+
+.fadeIn{
+     background-color: #ffcccc;
+     font-weight: bold;
+   width: 100px;
+    border: 1px solid #cc0000;
+    border-radius: 5px;
+     opacity:1;
+     transition: opacity 0.5s 0.05s;
+
+}
+.fadeOut{
+         background-color: #ffcccc;
+     font-weight: bold;
+    width: 100px;
+    border: 1px solid #cc0000;
+    border-radius: 5px;    
+     opacity:0;
+     transition: opacity 0.5s;
+}
+
+provider "aws" {
+  region = var.aws_region
+}
+
+resource "aws_s3_bucket" "lambda_bucket" {
+  bucket = var.lambda_bucket
+}
+
+data "archive_file" "backend" {
+  type        = "zip"
+  source_dir  = "../backend"
+  output_path = "./tmp/backend.zip"
+}
+
+resource "aws_s3_object" "backend" {
+  bucket = aws_s3_bucket.lambda_bucket.id
+  key    = "backend.zip"
+  source = data.archive_file.backend.output_path
+  etag   = data.archive_file.backend.output_md5
+}
+
+resource "aws_iam_role" "lambda_role" {
+  name               = "handler-lambda-role"
+  assume_role_policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "s1",
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow"
+    }
+  ]
+}
+EOF
+}
+
+resource "aws_iam_role_policy" "lambda_role_policy" {
+  name = "lambda-policy"
+  role = aws_iam_role.lambda_role.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action   = ["secretsmanager:GetSecretValue"]
+        Effect   = "Allow"
+        Resource = "arn:aws:secretsmanager:ap-southeast-2:639886339024:secret:OPENAI_API_KEY-8ox8rw"
+      },
+    ]
+  })
+}
+
+resource "aws_iam_role_policy_attachment" "basic_executionrole" {
+  role       = aws_iam_role.lambda_role.id
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+}
+
+resource "aws_lambda_function" "lambda_handler" {
+  function_name    = "marcio-gh-backend-openai"
+  role             = aws_iam_role.lambda_role.arn
+  handler          = "handler.lambda_handler"
+  source_code_hash = data.archive_file.backend.output_base64sha256
+  runtime          = "python3.9"
+  layers           = ["arn:aws:lambda:ap-southeast-2:639886339024:layer:openai-layer:6"]
+  timeout          = 20
+  s3_bucket        = aws_s3_bucket.lambda_bucket.id
+  s3_key           = aws_s3_object.backend.key
+
+  depends_on = [
+    aws_s3_object.backend
+  ]
+}
+
+resource "aws_cloudwatch_log_group" "lambda_cloudwatch_log" {
+  name              = "/aws/lambda/${aws_lambda_function.lambda_handler.function_name}"
+  retention_in_days = 14
+}
+
+
+
+resource "aws_iam_role" "api_gateway_cloudwatch" {
+  name               = "api-gateway-cloudwatch-role"
+  assume_role_policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "s1",
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "apigateway.amazonaws.com"
+      },
+      "Effect": "Allow"
+    }
+  ]
+}
+EOF
+}
+
+resource "aws_iam_role_policy_attachment" "api_gateway_cloudwatch_role" {
+  role       = aws_iam_role.api_gateway_cloudwatch.id
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+}
+
+
+
+resource "aws_api_gateway_rest_api" "openai" {
+  name        = "OpenAI"
+  description = "OpenAI"
+}
+
+resource "aws_api_gateway_resource" "proxy" {
+  rest_api_id = aws_api_gateway_rest_api.openai.id
+  parent_id   = aws_api_gateway_rest_api.openai.root_resource_id
+  path_part   = "{proxy+}"
+}
+
+resource "aws_api_gateway_method" "proxy" {
+  rest_api_id   = aws_api_gateway_rest_api.openai.id
+  resource_id   = aws_api_gateway_resource.proxy.id
+  http_method   = "ANY"
+  authorization = "NONE"
+}
+
+resource "aws_api_gateway_method" "proxy_root" {
+  rest_api_id   = aws_api_gateway_rest_api.openai.id
+  resource_id   = aws_api_gateway_rest_api.openai.root_resource_id
+  http_method   = "ANY"
+  authorization = "NONE"
+}
+
+resource "aws_api_gateway_integration" "lambda" {
+  rest_api_id             = aws_api_gateway_rest_api.openai.id
+  resource_id             = aws_api_gateway_method.proxy.resource_id
+  http_method             = aws_api_gateway_method.proxy.http_method
+  integration_http_method = "POST"
+  type                    = "AWS_PROXY"
+  uri                     = aws_lambda_function.lambda_handler.invoke_arn
+}
+
+resource "aws_api_gateway_integration" "lambda_root" {
+  rest_api_id             = aws_api_gateway_rest_api.openai.id
+  resource_id             = aws_api_gateway_method.proxy_root.resource_id
+  http_method             = aws_api_gateway_method.proxy_root.http_method
+  integration_http_method = "POST"
+  type                    = "AWS_PROXY"
+  uri                     = aws_lambda_function.lambda_handler.invoke_arn
+}
+
+resource "aws_api_gateway_deployment" "openai" {
+  depends_on = [
+    aws_api_gateway_integration.lambda,
+    aws_api_gateway_integration.lambda_root,
+  ]
+  rest_api_id = aws_api_gateway_rest_api.openai.id
+}
+
+resource "aws_api_gateway_stage" "openai_stage" {
+  rest_api_id   = aws_api_gateway_rest_api.openai.id
+  deployment_id = aws_api_gateway_deployment.openai.id
+  stage_name    = "test"
+}
+
+resource "aws_lambda_permission" "apigw" {
+  statement_id  = "AllowAPIGatewayInvoke"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.lambda_handler.function_name
+  principal     = "apigateway.amazonaws.com"
+  source_arn    = "${aws_api_gateway_rest_api.openai.execution_arn}/*/*"
+}
+
+resource "aws_lambda_permission" "cloudwatch" {
+  statement_id  = "AllowLogs"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.lambda_handler.function_name
+  principal     = "apigateway.amazonaws.com"
+  source_arn    = "${aws_api_gateway_rest_api.openai.execution_arn}/*/*"
+}
+
+output "base_url" {
+  value = aws_api_gateway_deployment.openai.invoke_url
+}
+output "cloudwatch_role" {
+  value = aws_iam_role.api_gateway_cloudwatch.arn
+}
+# marciogh.com
+
+[https://marciogh.com](marciogh.com) This is my personal project where I'm
+experimenting with several different technologies.
+
+# OpenAI API
+
+- Python backend integration with OpenAI API, aiming to experiment with model
+  fine tuning and RAG (Retrieval Augmented Generation) chat bot capabilities, by
+  adding context from resumes, blogposts and other public contents related to
+  myself
+
+# AWS Serverless
+
+- Python AWS lambda functions behind API Gateway proxy.
+- Backend time slot rate limiter
+
+# Cloudfront
+
+- Website hosted behind Cloudfront edge optimized, with personal .com domain and
+  valid HTTPs certificate
+
+# React
+
+- NodeJS react frontend
+
+# DevOps
+
+Completely automated CI/CD pipeline
+
+- terraform
+- github actions
+- AWS OIDC authentication

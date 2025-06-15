@@ -1,23 +1,37 @@
 .Chat {
-    padding: 20px;
     font-family: 'Vazir', sans-serif;
 }
 
+.Chat button {
+  height: 40px;
+  width: 300px;
+  border-radius: 10px;
+   font-family: 'Vazir', sans-serif;
+   font-size: 15px;
+    background-color: #CC3333;
+    border: 0;
+    border-color: #CC3333;
+    font-weight: bold;
+    color: #660000;
+}
+
+.Chat h1 {
+  color: #660000;
+  margin: 0px;
+  padding: 0px;
+}
 .Chat button:hover {
     cursor:pointer;
-    background-color: #cc0000;
-    color: white;
+    background-color: #FF9999;
 }
 
 .Chat input {
     border-radius: 5px;
+    height: 14px;
     margin: 5px;
-    width: 265px;
+    width: 290px;
 }
 
-.Chat button {
-    border-radius: 5px;
-}
 
 .Chat span#error {
     background-color: #ffcccc;
@@ -31,6 +45,7 @@
 }
 
 .Chat .responsesContainer {
+    margin: 10px;
     border-radius: 5px;
     height: 300px;
     border: 1px solid #cccccc;
@@ -40,14 +55,7 @@
 }
 
 .Chat .responses {
-    margin: 10px;
     overflow-x: auto;
-}
-
-.Chat .responses div {
-    border-bottom: 1px solid #cccccc;
-    margin-bottom: 10px;
-    padding: 10px;
 }
 
 .Chat .spinnerContainer {
@@ -58,51 +66,44 @@
 }
 
 .fadeIn{
-     background-color: #ffcccc;
-     font-weight: bold;
-   width: 100px;
-    border: 1px solid #cc0000;
-    border-radius: 5px;
-     opacity:1;
-     transition: opacity 0.5s 0.05s;
-
+  position: absolute;
+  top: 180px;
+  background-color: #ffcccc;
+  font-weight: bold;
+  width: 100px;
+  border: 1px solid #cc0000;
+  border-radius: 5px;
+  opacity:1;
+  transition: opacity 0.5s 0.05s;
 }
 .fadeOut{
-         background-color: #ffcccc;
-     font-weight: bold;
-    width: 100px;
-    border: 1px solid #cc0000;
-    border-radius: 5px;    
-     opacity:0;
-     transition: opacity 0.5s;
-}
-
-.loader {
-    background-color: #000000;
+  position: absolute;
+  top: 180px;
+  background-color: #ffcccc;
+  font-weight: bold;
   width: 100px;
-  height: 40px;
-  --g: radial-gradient(farthest-side,#0000 calc(95% - 3px),#fff calc(100% - 3px) 98%,#0000 101%) no-repeat;
-  background: var(--g), var(--g), var(--g);
-  background-size: 30px 30px;
-  animation: l9 1s infinite alternate;
+  border: 1px solid #cc0000;
+  border-radius: 5px;    
+  opacity:0;
+  transition: opacity 0.5s;
 }
-@keyframes l9 {
-  0% {
-    background-position: 0 50%, 50% 50%, 100% 50%;
-  }
-  20% {
-    background-position: 0 0, 50% 50%, 100% 50%;
-  }
-  40% {
-    background-position: 0 100%, 50% 0, 100% 50%;
-  }
-  60% {
-    background-position: 0 50%, 50% 100%, 100% 0;
-  }
-  80% {
-    background-position: 0 50%, 50% 50%, 100% 100%;
-  }
-  100% {
-    background-position: 0 50%, 50% 50%, 100% 50%;
-  }
+.Chat span {
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  text-align: left;
+}
+.responseFadeIn {
+  background-color: #ffcccc;
+  border: 1px solid #cc0000;
+  border-radius: 5px;
+  opacity:1;
+  transition: opacity 0.5s 0.05s;  
+}
+.responseFadeOut{
+  background-color: #ffcccc;
+  border: 1px solid #cc0000;
+  border-radius: 5px;    
+  opacity:0;
+  transition: opacity 0s;
 }

@@ -13,14 +13,10 @@ body {
 }
 
 header {
-  min-height: 50px;
   background: lightcyan;
-}
-
-header {
-  min-height: 30px;
-  padding-top: 15px;
+  min-height: 50px;
   background: #993333;
+  border-bottom: 5px solid #000000;
 }
 
 header a {
@@ -28,9 +24,6 @@ header a {
   text-decoration: none;
   font-weight: bold;
 }
-
-
-/* The article fills all the space between header & footer */
 
 body {
   display: flex;

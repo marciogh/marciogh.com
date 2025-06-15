@@ -27,7 +27,7 @@ export default function Chat(): JSX.Element {
             setLastError("")
             setQ("")
             setResponseFadeIn(false);
-            if (lastResponse != "") {
+            if (lastResponse !== "") {
                 setResponses([lastResponse, ...responses]);
             }
             fetch(BACKEND + "?q=" + encodeURIComponent(q))

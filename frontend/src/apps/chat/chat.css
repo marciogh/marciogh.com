@@ -67,7 +67,7 @@
 
 .fadeIn{
   position: absolute;
-  top: 180px;
+  top: 445px;
   background-color: #ffcccc;
   font-weight: bold;
   width: 100px;
@@ -78,13 +78,13 @@
 }
 .fadeOut{
   position: absolute;
-  top: 180px;
+  top: 445px;
   background-color: #ffcccc;
   font-weight: bold;
   width: 100px;
   border: 1px solid #cc0000;
   border-radius: 5px;    
-  opacity:0;
+  opacity: 0;
   transition: opacity 0.5s;
 }
 .Chat span {
@@ -105,5 +105,5 @@
   border: 1px solid #cc0000;
   border-radius: 5px;    
   opacity:0;
-  transition: opacity 0s;
+  transition: opacity 0.1s;
 }

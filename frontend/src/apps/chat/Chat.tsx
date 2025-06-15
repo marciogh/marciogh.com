@@ -12,7 +12,6 @@ export default function Chat(): JSX.Element {
     const [spinner, setSpinner] = useState(false);
     const [lastResponse, setLastResponse] = useState<string>("");
     const [responses, setResponses] = useState<string[]>([]);
-    const [questions, setQuestions] = useState<string[]>([]);
     const [responseFadeIn, setResponseFadeIn] = useState<boolean>();
     const [lastError, setLastError] = useState<string>("");
     const [q, setQ] = useState<string>("");
@@ -27,10 +26,10 @@ export default function Chat(): JSX.Element {
             setSpinner(true);
             setLastError("")
             setQ("")
-            if (lastResponse != "") {
-                setResponses([...responses, lastResponse]);
-            }
             setResponseFadeIn(false);
+            if (lastResponse != "") {
+                setResponses([lastResponse, ...responses]);
+            }
             fetch(BACKEND + "?q=" + encodeURIComponent(q))
                 .then((response) => {
                     if (response.status === 429) {
@@ -41,8 +40,7 @@ export default function Chat(): JSX.Element {
                             const html = converter.makeHtml(data);
                             setSpinner(false);
                             setResponseFadeIn(true);
-                            setQuestions([q, ...questions])
-                            setResponses([html, ...responses]);
+                            setLastResponse(html);
                         })
                     }
                 })
@@ -61,18 +59,18 @@ export default function Chat(): JSX.Element {
             </div>
             <form onSubmit={onFormSubmit}>
                 <h1>Ask me anything</h1>
-                <input autoFocus type="text" name="q" value={q} onChange={e => setQ(e.target.value)}/>
+                <input autoFocus autocomplete="off" type="text" name="q" value={q} onChange={e => setQ(e.target.value)}/>
             </form>
-            {lastResponse?<span
-                className={responseFadeIn? "responseFadeIn" : "responseFadeOut"}
-                dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(lastResponse)}}
-            />: null
-            }
-            {responses.map(r => (
-                <span className="responseFadeIn"
-                    dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(r)}}
-                />
-            ))}
+                {lastResponse?<span
+                    className={responseFadeIn? "responseFadeIn" : "responseFadeOut"}
+                    dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(lastResponse)}}
+                />: null
+                }
+                {responses.map(r => (
+                    <span className="responseFadeIn"
+                        dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(r)}}
+                    />
+                ))}
             </div>
     )
 }
